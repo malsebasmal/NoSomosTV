@@ -1,0 +1,289 @@
+/* Root */
+:root{
+    --ligth: 300;
+    --regular: 400;
+    --bold: 700;
+}
+
+
+/* General Styles */
+.main {
+    background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+    background-blend-mode: multiply;
+
+    width: 100vw;
+    height: 100vh;
+}
+.main__div--general {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Top Styles */
+.div__div--index {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    /* Top Styles - Logo */
+.div__a--index-logo {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    margin-bottom: 1rem;
+}
+.div__a--index-logo:hover{
+    transform: scale(1.1);
+}
+.div__img--index-logo {
+    width: 9.375rem;
+    border-radius: 50%;
+}
+.div__a--index,
+.div__a--index::after {
+    padding: .625rem .625rem;
+    font-size: 1.2em;
+    background: linear-gradient(0deg, transparent 0%, #ffff 0%);
+    border: 0;
+    border-radius: .625rem;
+    color: #000;
+    letter-spacing: 1.5008px;
+    line-height: 1;
+    outline: transparent;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+.div__a--index:hover {
+    transform: scale(1.1);
+}
+.div__a--index::after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+    content: "@nosomostv";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #EF1E23 3%, #EF1E23 5%, #EF1E23 5%);
+    text-shadow: -10px -10px 0px #000, 10px 10px 0px #000;
+    clip-path: var(--slice-0);
+}
+.div__a--index:hover::after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+}
+@keyframes glitch {
+    0% {
+        clip-path: var(--slice-1);
+        transform: translate(-20px, -10px);
+    }
+
+    10% {
+        clip-path: var(--slice-3);
+        transform: translate(10px, 10px);
+    }
+
+    20% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 10px);
+    }
+
+    30% {
+        clip-path: var(--slice-3);
+        transform: translate(0px, 5px);
+    }
+
+    40% {
+        clip-path: var(--slice-2);
+        transform: translate(-5px, 0px);
+    }
+
+    50% {
+        clip-path: var(--slice-3);
+        transform: translate(5px, 0px);
+    }
+
+    60% {
+        clip-path: var(--slice-4);
+        transform: translate(5px, 10px);
+    }
+
+    70% {
+        clip-path: var(--slice-2);
+        transform: translate(-10px, 10px);
+    }
+
+    80% {
+        clip-path: var(--slice-5);
+        transform: translate(20px, -10px);
+    }
+
+    90% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 0px);
+    }
+
+    100% {
+        clip-path: var(--slice-1);
+        transform: translate(0);
+    }
+}
+.a__h1--index {
+    font-size: inherit;
+    font-weight: var(--bold);
+}
+
+    /* Top Styles - Ubication */
+.div__a--index-ubi {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-top: 0.6rem;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+.div__a--index-ubi:focus,
+.div__a--index-ubi:hover {
+    color: #fff;
+}
+
+.div__a--index-ubi:focus:after,
+.div__a--index-ubi:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+.div__a--index-ubi:after {
+    content: "";
+    pointer-events: none;
+    bottom: -1.5px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2.1px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+.a__img--index-ubi {
+    width: 1rem;
+    margin-right: 1.5px;
+}
+.a__span--index-ubi {
+    font-size: 0.9em;
+    font-weight: var(--regular);
+    color: #ffff;
+}
+
+
+    /* Top Styles - Links list */
+.div__ul--index {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    gap: 1.5rem;
+}
+.ul__li--index {
+}
+.li__a--index-links {
+    padding: 5px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    background: transparent;
+    box-shadow: transparent;
+    border: 0px solid transparent;
+    transition: 0.5s ease;
+    user-select: none;
+}
+.li__a--index-links:hover {
+    color: #EF1E23;
+    background: #EF1E23;
+    border: 1px solid #EF1E23;
+    box-shadow: 0 0 5px #EF1E23,
+                0 0 20px #EF1E23,
+                0 0 50px #EF1E23,
+                0 0 100px #EF1E23;
+}
+.a__img--index-link {
+    width: 3rem;
+}
+
+
+/* Footer Styles */
+.div__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+    /* Footer Styles - Video */
+.footer__div--inframe {
+    margin-top: 1.5rem;
+}
+.div__inframe {
+    width: 25rem;
+    height: 15rem;
+}
+
+    /* Footer Styles - Suscribe */
+.footer__a--suscribe {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    text-shadow: none;
+    background: transparent;
+    box-shadow: transparent;
+    transition: 0.5s ease;
+    user-select: none;
+}
+.footer__a--suscribe:hover {
+    color: #ffffff;
+    background: #EF1E23;
+    border: 1px solid #EF1E23;
+    text-shadow: 0 0 5px #ffffff,
+                0 0 10px #ffffff,
+                0 0 20px #ffffff;
+    box-shadow: 0 0 5px #EF1E23,
+                0 0 20px #EF1E23,
+                0 0 50px #EF1E23,
+                0 0 100px #EF1E23;
+}
+.a__img--suscribe {
+    width: 3.125rem;
+    margin-right: 0.2rem;
+}
+.a__span--suscribe {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: var(--bold);
+    letter-spacing: 1.5008px;
+}
