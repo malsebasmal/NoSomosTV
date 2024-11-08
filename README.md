@@ -1,2 +1,2 @@
-# NoSomosTv-StaticPage
-Page about the program youtube Nosomostv. Instagram: @nosomostv
+# NoSomosTV
+Page about the program -> YouTube: NoSomosTV | Instagram: @nosomostv
